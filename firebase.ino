@@ -72,7 +72,7 @@ void loop() {
   int vibration = digitalRead(VIBRATION_PIN);  
 
   String helmetStatus = (touch1 == 1 && touch2 == 1) ? "on" : "off";
-  String emergencyStatus = (vibration == LOW) ? "on" : "off";
+  String emergencyStatus = (vibration == HIGH) ? "on" : "off";
 
   // LED & Buzzer control
   if (temp >= 25 || humidity >= 60  || emergencyStatus == "on") {
